@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>BIO 345 Evolution: Genetic drift</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="               Dylan Padilla   Fall, 2022     dpadil10@asu.edu |   https://dylanpadilla.netlify.app/" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script src="libs/tone/Tone.js"></script>
+    <script src="libs/slide-tone/slide-tone.js"></script>
+    <link rel="stylesheet" href="default.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# BIO 345 Evolution: Genetic drift
+]
+.author[
+### <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> Dylan Padilla <br/> Fall, 2022 <br /> <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:red;height:1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg> <a href="mailto:dpadil10@asu.edu" class="email">dpadil10@asu.edu</a> | <svg viewBox="0 0 512 512" style="position:relative;display:inline-block;top:.1em;fill:red;height:1em;" xmlns="http://www.w3.org/2000/svg"> <path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg> <a href="https://dylanpadilla.netlify.app/" class="uri">https://dylanpadilla.netlify.app/</a>
+]
+
+---
+
+
+
+
+
+
+
+
+
+# Outline
+
+&lt;br/&gt;&lt;br/&gt;
+
+- Mechanisms of evolution
+
+--
+
+- Hardy-Weinberg equilibrium
+
+--
+
+- Discuss genetic drift
+
+--
+
+- Genetic drift examples
+
+---
+
+# What is &lt;span style='color: purple;'&gt;Evolution&lt;/span&gt;?
+
+---
+
+# What is &lt;span style='color: purple;'&gt;Evolution&lt;/span&gt;?
+
+
+.pull-left[
+
+
+![](imgs/mechanisms.jpeg)
+
+]
+
+.pull-right[
+
+
+
+]
+
+---
+
+# What is &lt;span style='color: purple;'&gt;Evolution&lt;/span&gt;?
+
+
+.pull-left[
+
+
+![](imgs/mechanisms.jpeg)
+
+
+]
+
+
+.pull-right[
+
+&lt;center&gt;
+
+&lt;img src = "imgs/pop-gen-environment.png"  width = "450" height = "450"&gt;
+
+&lt;/center&gt;
+
+]
+
+---
+
+# Hardy-Weinberg Equilibrium
+
+
+.pull-left[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;center&gt;
+
+What happens when nothing is happening?
+
+&lt;/center&gt;
+
+]
+
+
+.pull-right[
+
+&lt;center&gt;
+
+&lt;img src = "imgs/HW.png"  width = "520" height = "450"&gt;
+
+&lt;/center&gt;
+
+]
+
+---
+
+# Hardy-Weinberg Equilibrium
+
+
+.pull-left[
+
+&lt;center&gt;
+
+
+&lt;img src = "imgs/assumptions.png"  width = "520" height = "450"&gt;
+
+
+&lt;/center&gt;
+
+]
+
+
+.pull-right[
+
+
+]
+
+---
+
+# Hardy-Weinberg Equilibrium
+
+
+.pull-left[
+
+&lt;center&gt;
+
+
+&lt;img src = "imgs/assumptions.png"  width = "520" height = "450"&gt;
+
+
+&lt;/center&gt;
+
+]
+
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;center&gt;
+
+These assumptions are not met by real populations, but reality is often close enough to the theory to allow accurate predictions to be made based on the H-W equilibrium
+
+&lt;/center&gt;
+
+]
+
+---
+
+# Hardy-Weinberg Equilibrium
+
+&lt;span style='color: purple;'&gt;With random mating and no evolution, allele frequencies do not change from one generation to the next&lt;/span&gt;
+
+.pull-left[
+
+&lt;center&gt;
+
+&lt;img src = "imgs/punnet.png"  width = "420" height = "400"&gt;
+
+
+&lt;/center&gt;
+
+]
+
+
+.pull-right[
+
+
+
+&lt;center&gt;
+
+
+\[f(A_1)=36\%+24\%=60\% \]
+
+\[f(A_2)=16\%+24\%=40\% \]
+
+
+Expressed as `\(p\)` and `\(q:\)`
+
+\[f(A_1)=p^2+\frac{1}{2}pq\]
+
+\[f(A_2)=q^2+\frac{1}{2}pq\]
+
+&lt;/center&gt;
+
+]
+
+---
+
+# Genetic drift
+
+&lt;br&gt;&lt;br&gt;
+
+
+
+- Changes in allele frequency that results from the random sampling of individuals from generation to generation in a finite population
+
+&lt;br&gt;
+--
+
+- Increases the homozygosity of a population (i.e., increases AA or aa, decreases Aa)
+
+&lt;br&gt;
+--
+
+- Reduction of genetic variation within a given population can increase the differences between populations of the same species
+
+
+---
+
+# Why is drift very important?
+
+&lt;span style='color: purple;'&gt;The neutal theory of evolution&lt;/span&gt;
+
+.pull-left[
+
+&lt;center&gt;
+
+&lt;img src = "imgs/kimura.png"  width = "360" height = "400"&gt;&lt;br&gt;
+Motoo Kimura
+
+&lt;/center&gt;
+
+]
+
+
+.pull-right[
+
+
+
+1. "claims that most of DNA sequence difference between alleles within a population or between species are due to neutral mutations"&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+2. Under this model, genetic mutations insert genetic variation into populations and are countered by the process of genetic drift which eliminates genetic variation from populations
+
+
+]
+
+---
+
+# Let's see an example
+
+
+```r
+Ne &lt;- c(60, 64, 48, 34, 22, 60, 46, 38, 24, 10)
+
+chrom &lt;- 2 * Ne
+
+p = .6
+
+q = 1 - p
+
+gen &lt;- 100
+
+matrix &lt;- array(NA, dim = c(100, 10))
+```
+
+---
+
+
+```r
+head(matrix)
+```
+
+```
+       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+  [1,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [2,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [3,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [4,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [5,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [6,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+```
+
+```r
+matrix[1, ] &lt;- round(rep(chrom*p, 1))
+
+head(matrix)
+```
+
+```
+       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+  [1,]   72   77   58   41   26   72   55   46   29    12
+  [2,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [3,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [4,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [5,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+  [6,]   NA   NA   NA   NA   NA   NA   NA   NA   NA    NA
+```
+
+---
+
+
+```r
+for(i in 2:gen){
+    for(j in 1:10){
+        matrix[i, j] &lt;- rbinom(n = 1, size = chrom, prob = matrix[i-1, j]/chrom)
+        
+    }
+}
+
+dat &lt;- as.data.frame(matrix)
+
+head(dat)
+```
+
+```
+    V1 V2 V3 V4 V5 V6 V7 V8 V9 V10
+  1 72 77 58 41 26 72 55 46 29  12
+  2 74 81 61 38 23 62 59 47 34  12
+  3 70 84 56 35 21 64 54 50 32  20
+  4 61 86 61 38 19 67 54 54 32  19
+  5 64 93 64 44 13 68 55 47 34  25
+  6 64 96 78 51 17 59 57 52 29  21
+```
+
+---
+
+
+```r
+for(i in 1:ncol(dat)){
+    dat[ , i] &lt;- round(dat[i]/chrom[i], 1)
+}
+
+
+head(dat)
+```
+
+```
+     V1  V2  V3  V4  V5  V6  V7  V8  V9 V10
+  1 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6
+  2 0.6 0.6 0.6 0.6 0.5 0.5 0.6 0.6 0.7 0.6
+  3 0.6 0.7 0.6 0.5 0.5 0.5 0.6 0.7 0.7 1.0
+  4 0.5 0.7 0.6 0.6 0.4 0.6 0.6 0.7 0.7 0.9
+  5 0.5 0.7 0.7 0.6 0.3 0.6 0.6 0.6 0.7 1.2
+  6 0.5 0.8 0.8 0.8 0.4 0.5 0.6 0.7 0.6 1.0
+```
+
+
+---
+
+
+.pull-left[
+
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+
+```r
+dat$gen &lt;- 1:100
+
+plot(rep(NA, 100), type = "n", ylim = c(0, 1), ylab = "Allele frequency", xlab = "Generation")
+lines(V1 ~ gen, data = dat, type = "l", lwd = 1.5, col = "gray", ylim = c(0, 1), ylab = "Allele frequency", xlab = "Generation")
+lines(V2 ~ gen, data = dat, lwd = 1.5, col = "black")
+lines(V6 ~ gen, data = dat, lwd = 1.5, col = "gray", lty = 2)
+lines(V7 ~ gen, data = dat, lwd = 1.5, lty = 2)
+legend("bottomleft", legend = c("pop1", "pop2", "pop6", "pop7"), col = c("gray", "black", "gray", "black"), lty = c(1, 1, 2, 2), lwd = 1.5, bty = "n")
+```
+
+]
+
+
+.pull-right[
+
+&lt;img src="slides_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+
+# Summary
+
+
+- Though natural selection is a major driver of evolution in populations, there are other processes that result in genetic changes as well
+
+--
+
+- Genetic drift is a random process meaning that there is no selective pressure needed for certain alleles to increase or decrease in a population
+
+--
+
+- Large fluctuations in allele frequencies are more common in small populations
+
+--
+
+- Genetic drift can have major effects when a population is sharply reduced in size by a natural disaster (bottleneck effect) or when a small group splits off from the main population to found a colony (founder effect)
+
+&lt;br&gt;
+
+&lt;center&gt;
+
+😎👍
+
+&lt;/center&gt;
+
+---
+
+# Online simulation
+
+
+
+[click here to follow along](https://cartwrig.ht/apps/genie/)&lt;br&gt;&lt;br&gt;
+
+📊🔭💻
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"slideNumberFormat": "%current%",
+"highlightStyle": "ir-black",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
