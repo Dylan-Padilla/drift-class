@@ -208,9 +208,9 @@ These assumptions are not met by real populations, but reality is often close en
 
 Expressed as `\(p\)` and `\(q:\)`
 
-\[f(A_1)=p^2+\frac{1}{2}pq\]
+\[f(A_1)=p^2+pq\]
 
-\[f(A_2)=q^2+\frac{1}{2}pq\]
+\[f(A_2)=q^2+pq\]
 
 &lt;/center&gt;
 
@@ -337,11 +337,11 @@ head(dat)
 ```
     V1 V2 V3 V4 V5 V6 V7 V8 V9 V10
   1 72 77 58 41 26 72 55 46 29  12
-  2 74 81 61 38 23 62 59 47 34  12
-  3 70 84 56 35 21 64 54 50 32  20
-  4 61 86 61 38 19 67 54 54 32  19
-  5 64 93 64 44 13 68 55 47 34  25
-  6 64 96 78 51 17 59 57 52 29  21
+  2 66 72 62 40 18 68 55 46 37  13
+  3 73 68 73 37 16 70 58 43 41   6
+  4 70 63 75 25 17 68 67 38 51   7
+  5 71 64 59 21 19 68 55 40 58   8
+  6 67 67 59 32 17 74 50 50 60  14
 ```
 
 ---
@@ -359,11 +359,11 @@ head(dat)
 ```
      V1  V2  V3  V4  V5  V6  V7  V8  V9 V10
   1 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6 0.6
-  2 0.6 0.6 0.6 0.6 0.5 0.5 0.6 0.6 0.7 0.6
-  3 0.6 0.7 0.6 0.5 0.5 0.5 0.6 0.7 0.7 1.0
-  4 0.5 0.7 0.6 0.6 0.4 0.6 0.6 0.7 0.7 0.9
-  5 0.5 0.7 0.7 0.6 0.3 0.6 0.6 0.6 0.7 1.2
-  6 0.5 0.8 0.8 0.8 0.4 0.5 0.6 0.7 0.6 1.0
+  2 0.6 0.6 0.6 0.6 0.4 0.6 0.6 0.6 0.8 0.7
+  3 0.6 0.5 0.8 0.5 0.4 0.6 0.6 0.6 0.9 0.3
+  4 0.6 0.5 0.8 0.4 0.4 0.6 0.7 0.5 1.1 0.3
+  5 0.6 0.5 0.6 0.3 0.4 0.6 0.6 0.5 1.2 0.4
+  6 0.6 0.5 0.6 0.5 0.4 0.6 0.5 0.7 1.2 0.7
 ```
 
 
@@ -393,7 +393,7 @@ legend("bottomleft", legend = c("pop1", "pop2", "pop6", "pop7"), col = c("gray",
 
 .pull-right[
 
-&lt;img src="slides_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 
 ]
 
@@ -434,7 +434,7 @@ legend("bottomleft", legend = c("pop1", "pop2", "pop6", "pop7"), col = c("gray",
 
 [click here to follow along](https://cartwrig.ht/apps/genie/)&lt;br&gt;&lt;br&gt;
 
-📊🔭💻
+📊🔬💻
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

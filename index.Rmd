@@ -215,9 +215,9 @@ These assumptions are not met by real populations, but reality is often close en
 
 Expressed as $p$ and $q:$
 
-\[f(A_1)=p^2+\frac{1}{2}pq\]
+\[f(A_1)=p^2+pq\]
 
-\[f(A_2)=q^2+\frac{1}{2}pq\]
+\[f(A_2)=q^2+pq\]
 
 </center>
 
