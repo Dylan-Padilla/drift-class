@@ -1,6 +1,6 @@
 ---
 title: "BIO 345 Evolution: Genetic drift"
-author: <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> Dylan Padilla <br/> Fall, 2022 <br /> `r icon_style(fontawesome("envelope", style = "solid"), scale = 1, fill = "red")` dpadil10@asu.edu | `r icon_style(fontawesome("link", style = "solid"), scale = 1, fill = "red")` https://dylanpadilla.netlify.app/
+author: <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> Dylan Padilla <br/> Spring, 2023 <br /> `r icon_style(fontawesome("envelope", style = "solid"), scale = 1, fill = "red")` dpadil10@asu.edu | `r icon_style(fontawesome("link", style = "solid"), scale = 1, fill = "red")` https://dylanpadilla.netlify.app/
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -14,7 +14,7 @@ output:
       countIncrementalSlides: true
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, dpi = 300}
 require(rmarkdown)
 require(xaringan)
 require(xaringanExtra)
@@ -29,6 +29,17 @@ knitr::opts_chunk$set(dpi = 300,            # ensures high resolution images
                       error = FALSE,       # FALSE: Suppresses error messages
                       fig.align = "center")
 
+
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+
+
 ```
 
 
@@ -36,6 +47,30 @@ knitr::opts_chunk$set(dpi = 300,            # ensures high resolution images
 ```{r xaringan-slide-tone, echo=FALSE}
 xaringanExtra::use_slide_tone()
 ```
+
+# Announcements
+
+- Leading recitaions
+
+1. Genetic drift
+
+--
+
+2. Game theory
+
+--
+
+3. Speciation
+
+<br><br>
+
+--
+
+
+- Let's do this as interactive as possible!
+
+
+---
 
 
 # Outline
@@ -309,6 +344,9 @@ head(matrix)
 
 ```{r, echo = TRUE, fig.height = 7, fig.width = 7, fig.align = "center", warning = FALSE, comment = " ", message = FALSE}
 
+
+set.seed(1094)
+
 for(i in 2:gen){
     for(j in 1:10){
         matrix[i, j] <- rbinom(n = 1, size = chrom, prob = matrix[i-1, j]/chrom)
@@ -350,6 +388,7 @@ head(dat)
 
 dat$gen <- 1:100
 
+par(las = 1)
 plot(rep(NA, 100), type = "n", ylim = c(0, 1), ylab = "Allele frequency", xlab = "Generation")
 lines(V1 ~ gen, data = dat, type = "l", lwd = 1.5, col = "gray", ylim = c(0, 1), ylab = "Allele frequency", xlab = "Generation")
 lines(V2 ~ gen, data = dat, lwd = 1.5, col = "black")
@@ -368,6 +407,7 @@ legend("bottomleft", legend = c("pop1", "pop2", "pop6", "pop7"), col = c("gray",
 
 dat$gen <- 1:100
 
+par(las = 1)
 plot(rep(NA, 100), type = "n", ylim = c(0, 1), ylab = "Allele frequency", xlab = "Generation")
 lines(V1 ~ gen, data = dat, type = "l", lwd = 1.5, col = "gray", ylim = c(0, 1), ylab = "Allele frequency", xlab = "Generation")
 lines(V2 ~ gen, data = dat, lwd = 1.5, col = "black")
