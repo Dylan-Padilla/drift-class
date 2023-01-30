@@ -270,6 +270,48 @@ Expressed as $p$ and $q:$
 
 ---
 
+
+# Bottleneck effect
+
+## `r colorize("Fluctuating Population Size", "purple")`
+
+
+```{r, echo = FALSE, fig.align = "center", out.width = "45%"}
+
+
+N <- c(100, 100, 10, rep(100, 50))
+Ne <- 100
+for( i in 2:length(N)) {
+  Ne[i] <- 1 / ( 1/i * sum(1/N[1:i]) )
+}
+
+df <- data.frame(Time= 1:length(Ne), Ne )
+
+plot(Ne ~ Time, data = df, type = "l", lwd = 2.5, col = "yellow1", cex.axis = 1.5, cex.lab = 1.5, las = 1)
+points(Ne ~ Time, data = df, pch = 19, col = "skyblue")
+arrows(20, 40, 5, 26, lwd = 2.5, col = "yellow1")
+text(28, 40, "Bottleneck", cex = 2, col = "skyblue")
+
+```
+
+
+---
+
+
+# Founder effect
+
+<br>
+
+<center>
+
+<img src = "imgs/founder-effect.jpeg"  width = "700" height = "400"><br>
+
+</center>
+
+
+
+---
+
 # Why is drift very important?
 
 `r colorize("The neutal theory of evolution", "purple")`
